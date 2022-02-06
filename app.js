@@ -79,20 +79,42 @@ function moveTimer() {
     
    
     let days = Math.floor(totalMiliSeconds / miliSecondsInADay);
-    const months = Math.floor(days / 31)
-    const years = Math.floor(months / 12)
+    let days2;
+    const months = Math.floor(days / 31);
+    let months2;
+    const years = Math.floor(months / 12);
     
 
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds % 60);
 
+    
+    // DAYS ###########################################
     if (eventDay.getDate() > today.getDate()) {     // if the day of event is higher than today
-        days = eventDay.getDate() - today.getDate() - 1;
+        days2 = eventDay.getDate() - today.getDate() - 1;
     }
     else if (eventDay.getDate() < today.getDate()) {  // if the day of event is lowe then today
-        days = days % 30;
+        days2 = days % 30;
+        console.log(days2, 'if 2 days');
+    } else if (eventDay.getDate() == today.getDate()) {
+        days2 = 0;
     }
+    
+    console.log(eventDay.getMonth(), today.getMonth());
+    // MONTHS ###########################################
+    if (eventDay.getMonth() > today.getMonth()) {     // if the day of event is higher than today
+        months2 = eventDay.getMonth() - today.getMonth() - 1;
+        console.log('if 1', months2, eventDay.getMonth(), today.getMonth());
+
+    }
+    else if (eventDay.getMonth() < today.getMonth()) {  // if the day of event is lowe then today
+        months2 = 11 - today.getMonth();
+        console.log('if 2');
+    } else if (eventDay.getMonth() == today.getMonth()) {
+        months2 = 0;
+    }
+
 
     if (years == 0 && months == 0 && days == 0 && hours == 0 && seconds == 0) {
         clearInterval(theInterval);      // stop the timer count
@@ -102,8 +124,8 @@ function moveTimer() {
 
  
     document.querySelector('.years__number').textContent = years;    
-    document.querySelector('.months__number').textContent = months;    
-    document.querySelector('.days__number').textContent = days;    
+    document.querySelector('.months__number').textContent = months2;    
+    document.querySelector('.days__number').textContent = days2;    
     document.querySelector('.hours__number').textContent = hours;    
     document.querySelector('.minutes__number').textContent = minutes;    
     document.querySelector('.seconds__number').textContent = seconds;    
