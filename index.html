@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down Timer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mobile.css">
+</head>
+<body>
+    <div class="container_inputs">
+        <input type="text" class="event_name_input" placeholder="EVENT NAME">
+        <input type="datetime-local" class="event_time_input">
+    </div>
+
+    <p class="start">START</p>
+    
+
+    <section class="container_countdown">
+        <div class="dates_container">
+            <p class="years__number">02</p>
+            <label for="years">YEARS</label>
+        </div>
+        
+        <div class="boundary__line"></div>
+        
+        <div class="dates_container">
+            <p class="months__number">08</p>
+            <label for="months">MONTHS</label>
+        </div>
+
+        <div class="boundary__line"></div>
+        
+        <div class="dates_container">
+            <p class="days__number">26</p>
+            <label for="days">DAYS</label>
+        </div>
+
+        <div class="boundary__line"></div>
+        
+        <div class="dates_container">
+            <p class="hours__number">12</p>
+            <label for="hours">HOURS</label>
+        </div>
+
+        <div class="boundary__line"></div>
+        
+        <div class="dates_container">
+            <p class="minutes__number">55</p>
+            <label for="minutes">MINUTES</label>
+        </div>
+
+        <div class="boundary__line"></div>
+        
+        <div class="dates_container">
+            <p class="seconds__number">00</p>
+            <label for="seconds">SECONDS</label>
+        </div>
+
+       
+        
+    </section>
+
+    <p class="event_name">Adela's Birthday</p>
+    <button class="reset">RESET</button>
+    
+    <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@media screen and (orientation: portrait) and (max-width: 800px) {
+    body {
+        background: url('/img/rotate.gif') no-repeat center center;
+        background-color: rgb(39, 51, 214);
+    }
+
+    .container_inputs,
+    .start,
+    .container_countdown,
+    .event_name,
+    .reset {
+        display: none !important;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1150px) {
+  /* ########################################################################## */
+/*                                   SECOND PAGE                                */
+  /* ########################################################################## */
+
+
+    p,
+    label {
+        font-size: 30px;
+    }
+
+    .container_countdown {
+        margin-bottom: 50px;
+    }
+
+    .boundary__line {
+        height: 100px;
+        width: 1px;
+        margin: 0 20px;
+    }
+
+    .event_name {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .reset {
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 5px 50px;
+    }
+
+/* ########################################################################## */
+/*                                   FIRST PAGE                               */
+  /* ######################################################################## */
+
+    .event_name_input {
+        font-size: 25px !important;
+    }
+
+    .event_time_input {
+        font-size: 20px !important;
+        width: 220px !important;
+    }
+
+    .start {
+        font-size: 20px !important;
+    }
+}
