@@ -86,9 +86,12 @@ function moveTimer() {
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds % 60);
- 
+
     if (eventDay.getDate() > today.getDate()) {     // if the day of event is higher than today
         days = eventDay.getDate() - today.getDate() - 1;
+    }
+    else if (eventDay.getDate() < today.getDate()) {  // if the day of event is lowe then today
+        days = days % 30;
     }
 
     if (years == 0 && months == 0 && days == 0 && hours == 0 && seconds == 0) {
@@ -96,8 +99,6 @@ function moveTimer() {
         const audio = new Audio('/sound/mixkit-score-casino-counter-1998.wav');     
         audio.play();     // play a sound
     }
-
-
 
  
     document.querySelector('.years__number').textContent = years;    
